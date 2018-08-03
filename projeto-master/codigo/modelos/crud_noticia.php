@@ -39,12 +39,12 @@ class crud_noticia
     public function get_noticia( int $id)
     {
         $this->conexao = DBConnection::getConexao();
-        $sql = 'select * from noticia where cod_noticia = $id';
+        $sql = 'select * from noticia where cod_noticia = "$id"';
         $resultado = $this->conexao->query($sql);
-        $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
-        $lista_noticias[] = new noticia($noticias['cod_noticia'], $noticias['titulo_da_noticia']);
+        $noticia = $resultado->fetchAll(PDO::FETCH_ASSOC);
+        $lista_noticia[] = new noticia($noticia['cod_noticia'], $noticia['titulo_da_noticia'],$noticia['descricao']);
 
-        return $lista_noticias;
+        return $lista_noticia;
     }
 
     public function insert_noticia(noticia $not)

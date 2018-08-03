@@ -77,18 +77,14 @@
   					foreach ($noticias as $noticia):
 				?>
 				<div class="column">
-					<div class="ui  segment" style=";background-color: #191919">
+					<a href="notind.php?id=<?= $noticia->getId(); ?>"><div class="ui  segment" style=";background-color: #191919">
 						<h1 style="color: white">
 							<?=
 								$noticia->getTitulo();
 							?>
 						</h1>
-						<p style="color: white">
-							<?=
-								$noticia->getDescricao();
-							?>
-						</p>
-					</div>
+
+					</div></a>
 				</div>
 
 				<div class="column" style="margin-top: -2%; width: 15%">

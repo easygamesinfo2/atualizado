@@ -1,19 +1,6 @@
 <?php 
 	
-	$conexao = new PDO("mysql:host=localhost;dbname=projeto", "root", "");
-	
-?>
-<!DOCTYPE html>
-<html>
-<head>
-		<title>Login ...</title>
-		<script type="text/javascript">
-		</script>
-
-</head>
-<body>
-
-	<?php 
+	$conexao = new PDO("mysql:host=localhost;dbname=projeto", "root", "root");
 	
 	$email  = $_POST['email'];
 	$senha  = $_POST['senha'];
@@ -38,7 +25,5 @@
 
 ?>
 
-</body>
-</html>
 
 
