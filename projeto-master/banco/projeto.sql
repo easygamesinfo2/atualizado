@@ -5,25 +5,25 @@
 
 CREATE TABLE usuario (
 cod_usuario int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-senha varchar(15),
-email varchar(50),
-nome varchar(50),
-tipo_user int
+senha_usuario varchar(15),
+email_usuario varchar(30),
+nome_usuario varchar(50),
+tipo_usuario int
 );
 
 CREATE TABLE noticia (
 cod_noticia int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 data_noticia date,
-descricao text,
 status tinyint,
-titulo varchar(150),
-qtd tinyint
+titulo_noticia varchar (100),
+qtd tinyint,
+descricao_noticia text
 );
 
 CREATE TABLE avaliacao (
 cod_avaliacao int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-nome varchar(100),
-descricao text,
+nome_avaliacao varchar(50),
+descricao_avaliacao text,
 data_avaliacao date
 );
 
