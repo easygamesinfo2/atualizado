@@ -112,7 +112,7 @@ $avaliacoes = $crud->getAvaliacoes();
             $descricao = $_POST['descricao'];
             $ava = new Avaliacao($nome,$descricao);
             $crud = new AvaliacaoCrud();
-            $crud->atualiza_avaliacao($ava, $_GET['id']);
+            $crud->atualizaAvaliacao($ava, $_GET['id']);
             header('Location: exibe_avaliacao.php');
         }
 

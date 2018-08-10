@@ -77,15 +77,16 @@
   					foreach ($avaliacoes as $avaliacao):
 		?>
 				<div class="column">
-					<a href="avaind.php?id=<?= $avaliacao->getCod(); ?>"><div class="ui  segment" style=";background-color: #191919">
-						<h1 style="color: white">
+					<div class="ui  segment" style=";background-color: #191919">
+						<a href="avaind.php?id=<?= $avaliacao->getCod(); ?>">
+							<h1 style="color: white">
 							<?=
 								$avaliacao->getNome();
 							?>
-						</h1>
-						<p>
+							</h1>
+						</a>
+						</p>
 							<?=
-
 								$avaliacao->getDescricao();
 							?>
 						</p>
