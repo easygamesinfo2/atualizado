@@ -64,7 +64,7 @@ class AvaliacaoCrud
         $dados[] = $ava->getCod();
         $dados[] = $ava->getNome();
         $dados[] = $ava->getDescricao();
-        $sql = "update avaliacao set nome_avaliacao = '$dados[0]', descricao_avaliacao = '$dados[1]' WHERE cod_avaliacao = ".$id;
+        $sql = "update avaliacao set nome_avaliacao = '$dados[0]', descricao_avaliacao = '$dados[1]' WHERE cod_avaliacao = ".$cod;
         $this->conexao->exec($sql);
 
     }
