@@ -40,7 +40,7 @@ class AvaliacaoCrud
     public function getAvaliacao( int $cod)
     {
         $this->conexao = DBConnection::getConexao();
-        $sql = 'select * from avaliacao where cod_avaliacao = '.$cod;
+        $sql = "select * from avaliacao where cod_avaliacao = ".$cod;
         $resultado = $this->conexao->query($sql);
         $avaliacao = $resultado->fetchAll(PDO::FETCH_ASSOC);
         $objava = new Avaliacao($avaliacao['cod_avaliacao'], $avaliacao['nome']);
@@ -51,14 +51,20 @@ class AvaliacaoCrud
     public function insertAvaliacao(Avaliacao $ava)
     {
         $this->conexao = DBConnection::getConexao();
-        $sql = "insert into avaliacao(nome_avaliacao,descricao_avaliacao) values('".$ava->getNome."', '".$ava->getDescricao."')";
-        $this->conexao->exec($sql);
+        $dados[] = $ava->getCod();
+        $dados[] = $ava->getNome();
+        $dados[] = $ava->getDescricao();
+        $this->conexao->exec("insert into avaliacao(nome_avaliacao,descricao_avaliacao) values('$dados[0]','$dados[1]')
+    ");
     }
 
     public function atualizaAvaliacao(Avaliacao $ava, $cod)
     {
         $this->conexao = DBConnection::getConexao();
-        $sql = "update avaliacao set nome = '".$ava->getNome."', descricao = '".$ava->getDescricao."' WHERE cod_avaliacao = ".$cod;
+        $dados[] = $ava->getCod();
+        $dados[] = $ava->getNome();
+        $dados[] = $ava->getDescricao();
+        $sql = "update avaliacao set nome_avaliacao = '$dados[0]', descricao_avaliacao = '$dados[1]' WHERE cod_avaliacao = ".$id;
         $this->conexao->exec($sql);
 
     }

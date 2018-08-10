@@ -14,6 +14,10 @@ class Avaliacao
 
     public function __construct($cod = null, $nome = null, $descricao = null)
     {
+
+        $this->cod = $cod;
+        $this->nome = $nome;
+        $this->descricao = $descricao;
     }
 
     /**
