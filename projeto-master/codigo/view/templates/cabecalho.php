@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
@@ -8,7 +6,7 @@
 
     <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+    <link rel="stylesheet" type="text/css" href="../semantic/semantic.css">
 
     <script type="text/javascript" src="semantic/semantic.min.js"></script>
     <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
@@ -20,7 +18,7 @@
 <div class="ui top attached tabular inverted menu" style= "height:5.5%;background-color: #191919; ">
 
     <div class="ui medium image" style=" margin-left: 3%">
-        <img src="imagenseg/Easy Gaming.png">
+        <img src="../imagenseg/Easy Gaming.png">
     </div>
     <div class="right menu">
         <a class="item" href="indexAdmin.html">
@@ -65,3 +63,4 @@
         location.href="exibe_avaliacao.php"
     }
 </script>
+</html>
